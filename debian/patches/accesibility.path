@@ -1,0 +1,40 @@
+Sólo en screenruler-0.960+bzr41.orig: AUTHORS
+Sólo en screenruler-0.960+bzr41.orig: COPYING
+diff -u screenruler-0.960+bzr41.orig/preferences_window.rb screenruler/preferences_window.rb
+--- screenruler-0.960+bzr41.orig/preferences_window.rb	2012-01-24 19:39:47.000000000 -0300
++++ screenruler/preferences_window.rb	2015-05-27 11:51:03.855270812 -0300
+@@ -20,8 +20,8 @@
+ 
+ class PreferencesWindow < GladeWindow
+ 	DEFAULT_FOREGROUND_COLOR = '#202020'
+-	DEFAULT_BACKGROUND_COLOR = '#E6E36B'
+-	DEFAULT_OPACITY = 0.85
++	DEFAULT_BACKGROUND_COLOR = '#FEC85A'
++	DEFAULT_OPACITY = 1.0
+ 
+ 	MM_TO_INCHES = (1.0 / 25.4)		# 1 inch = 25.4 millimeters
+ 
+diff -u screenruler-0.960+bzr41.orig/ruler_popup_menu.rb screenruler/ruler_popup_menu.rb
+--- screenruler-0.960+bzr41.orig/ruler_popup_menu.rb	2012-01-24 19:39:47.000000000 -0300
++++ screenruler/ruler_popup_menu.rb	2015-05-27 11:51:03.855270812 -0300
+@@ -66,7 +66,7 @@
+ 	def read_settings(settings)
+ 		self.track_mouse = (settings['track_mouse'] || false)
+ 		self.keep_above = (settings['keep_above'] || false)
+-		self.unit = (settings['metric'] || UNIT_PIXELS)
++		self.unit = (settings['metric'] || UNIT_CENTIMETERS)
+ 	end
+ 
+ 	def write_settings(settings)
+diff -u screenruler-0.960+bzr41.orig/ruler_window.rb screenruler/ruler_window.rb
+--- screenruler-0.960+bzr41.orig/ruler_window.rb	2012-01-24 19:39:47.000000000 -0300
++++ screenruler/ruler_window.rb	2015-05-27 11:51:03.855270812 -0300
+@@ -163,7 +164,7 @@
+ 
+ 	def configure_ppi
+ 		@edge_size = 8
+-		@breadth = 35		# together with 'length', these are the two dimensions, independent of ruler rotation (whereas width=x, height=y)
++		@breadth = 45		# together with 'length', these are the two dimensions, independent of ruler rotation (whereas width=x, height=y)
+ 	end
+ 
+ 	def distance_from_zero(x, y)

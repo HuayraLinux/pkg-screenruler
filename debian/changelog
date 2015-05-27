@@ -1,3 +1,10 @@
+screenruler (0.960+bzr41-2) unstable; urgency=medium
+
+  * Change default color, switch to centimeters by default and opaque.
+  * Widens the rule.
+
+ -- Matias De lellis <mati86dl@gmail.com>  Wed, 27 May 2015 11:57:55 -0300
+
 screenruler (0.960+bzr41-1.2) unstable; urgency=medium
 
   * Non-maintainer upload.
