@@ -10,4 +10,4 @@ Comment[de]=Messen Sie Objekte auf dem Bildschirm
 Comment[es]=Mide objetos en la pantalla
 Exec=screenruler
 Icon=screenruler
-Categories=GTK;Utility;
+Categories=Utility;Accessibility;
